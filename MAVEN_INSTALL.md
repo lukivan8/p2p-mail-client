@@ -1,69 +1,69 @@
-# Maven Installation Guide
+# Руководство по установке Maven
 
-This guide provides instructions for installing Apache Maven on different operating systems.
+Это руководство предоставляет инструкции по установке Apache Maven на различных операционных системах.
 
 ## Windows
 
-1. Download the Maven zip file from the [Apache Maven site](https://maven.apache.org/download.cgi).
-2. Unzip it to a directory of your choice (e.g., `C:\Program Files\Apache\maven`).
-3. Add Maven's `bin` directory to your PATH environment variable:
-    - Right-click on 'This PC' or 'My Computer' and select 'Properties'.
-    - Click on 'Advanced system settings'.
-    - Click on 'Environment Variables'.
-    - Under 'System variables', find and select 'Path', then click 'Edit'.
-    - Click 'New' and add the path to Maven's bin directory (e.g., `C:\Program Files\Apache\maven\bin`).
-    - Click 'OK' to close all dialogs.
-4. Open a new command prompt and run `mvn -version` to verify the installation.
+1. Скачайте zip-файл Maven с [сайта Apache Maven](https://maven.apache.org/download.cgi).
+2. Распакуйте его в директорию по вашему выбору (например, `C:\Program Files\Apache\maven`).
+3. Добавьте директорию `bin` Maven в переменную среды PATH:
+   - Правой кнопкой мыши нажмите на 'Этот компьютер' и выберите 'Свойства'.
+   - Нажмите на 'Дополнительные параметры системы'.
+   - Нажмите на 'Переменные среды'.
+   - В разделе 'Системные переменные' найдите и выберите 'Path', затем нажмите 'Изменить'.
+   - Нажмите 'Создать' и добавьте путь к директории bin Maven (например, `C:\Program Files\Apache\maven\bin`).
+   - Нажмите 'ОК', чтобы закрыть все диалоговые окна.
+4. Откройте новое окно командной строки и выполните `mvn -version`, чтобы проверить установку.
 
-## macOS (using Homebrew)
+## macOS (с использованием Homebrew)
 
-1. Open Terminal.
-2. Install Homebrew if you haven't already:
+1. Откройте Терминал.
+2. Установите Homebrew, если у вас его еще нет. Если есть, пропустите этот шаг:
    ```
    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
    ```
-3. Install Maven:
+3. Установите Maven:
    ```
    brew install maven
    ```
-4. Verify the installation:
+4. Проверьте установку:
    ```
    mvn -version
    ```
 
 ## Linux (Ubuntu/Debian)
 
-1. Open Terminal.
-2. Update package index:
+1. Откройте Терминал.
+2. Обновите индекс пакетов:
    ```
    sudo apt update
    ```
-3. Install Maven:
+3. Установите Maven:
    ```
    sudo apt install maven
    ```
-4. Verify the installation:
+4. Проверьте установку:
    ```
    mvn -version
    ```
 
-## Verifying Installation
+## Проверка установки
 
-After installation, run the following command to ensure Maven is correctly installed:
+После установки выполните следующую команду, чтобы убедиться, что Maven корректно установлен:
 
 ```
 mvn -version
 ```
 
-This should display the Maven version, Java version, and other system information.
+Это должно отобразить версию Maven, версию Java и другую системную информацию.
 
-## Troubleshooting
+## Устранение неполадок
 
-If you encounter any issues:
+Если вы столкнулись с какими-либо проблемами:
 
-1. Ensure JAVA_HOME environment variable is set correctly.
-2. Check if the PATH includes the Maven bin directory.
-3. Restart your terminal or command prompt after making environment changes.
-4. If using an IDE, restart it to recognize the new Maven installation.
+1. Убедитесь, что переменная среды JAVA_HOME правильно установлена.
+2. Проверьте, включена ли директория bin Maven в PATH.
+3. Перезапустите терминал или командную строку после внесения изменений в переменные среды.
+4. Если вы используете IDE, перезапустите ее, чтобы распознать новую установку Maven.
 
-For more detailed information, visit the [official Maven installation guide](https://maven.apache.org/install.html).
+Для более подробной информации посетите [официальное руководство по установке Maven](https://maven.apache.org/install.html).

@@ -32,44 +32,44 @@ public class CommandLineInterface {
                     listPeers();
                     break;
                 case 4:
-                    System.out.println("Exiting...");
+                    System.out.println("Выходим...");
                     System.exit(0);
                 default:
-                    System.out.println("Invalid option. Please try again.");
+                    System.out.println("Неверное действие. Попробуйте снова...");
             }
         }
     }
 
     private void displayMenu() {
-        System.out.println("\n1. Send Message");
-        System.out.println("2. Check Inbox");
-        System.out.println("3. List Peers");
-        System.out.println("4. Exit");
-        System.out.print("Choose an option: ");
+        System.out.println("\n1. Отправить Сообщение");
+        System.out.println("2. Проверить Входящие");
+        System.out.println("3. Список Активных пользователей");
+        System.out.println("4. Выход");
+        System.out.print("Выберите действие: ");
     }
 
     private void sendMessage() {
-        System.out.print("To: ");
+        System.out.print("Получатель: ");
         String to = scanner.nextLine();
-        System.out.print("Subject: ");
+        System.out.print("Тема: ");
         String subject = scanner.nextLine();
-        System.out.print("Body: ");
+        System.out.print("Текст: ");
         String body = scanner.nextLine();
         client.sendMessage(to, subject, body);
     }
 
     private void checkInbox() {
-        System.out.println("Inbox:");
+        System.out.println("Входящие:");
         for (Message message : client.getInbox()) {
-            System.out.println("From: " + message.from());
-            System.out.println("Subject: " + message.subject());
-            System.out.println("Body: " + message.body());
+            System.out.println("Отправитель: " + message.from());
+            System.out.println("Тема: " + message.subject());
+            System.out.println("Текст: " + message.body());
             System.out.println("--------------------");
         }
     }
 
     private void listPeers() {
-        System.out.println("Peers:");
+        System.out.println("Активные пользователи:");
         for (Peer peer : client.getPeerList().values()) {
             System.out.println(peer.email() + " - " + peer.address().getHostAddress());
         }

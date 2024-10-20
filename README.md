@@ -1,73 +1,70 @@
-# P2P Mail Client
+# P2P Почтовый Клиент
 
-A simple peer-to-peer mail client for local networks.
+Простой почтовый клиент прямого обмена сообщениями.
 
-## Prerequisites
+Пир - это просто компьютер, который обменивается сообщениями с другими пирами в одноранговой сети.
 
-- Java Development Kit (JDK) 22 or later
-- Apache Maven 3.6.0 or later
+## Требования
 
-## Installing Maven
+- Java Development Kit (JDK) 22 или новее
+- Apache Maven 3.6.0 или новее
 
-If you don't have Maven installed, please follow the instructions in our [Maven Installation Guide](MAVEN_INSTALL.md).
+## Установка Maven
 
-## Installation and Running
+Если у вас не установлен Maven, пожалуйста, следуйте инструкциям в нашем [Руководстве по установке Maven](MAVEN_INSTALL.md).
 
-1. Clone the repository:
+## Установка и запуск
+
+1. Клонируйте репозиторий:
    ```
-   git clone https://github.com/yourusername/p2p-mail-client.git
+   git clone https://github.com/lukivan8/p2p-mail-client.git
    cd p2p-mail-client
    ```
-2. Build the project:
+2. Соберите проект:
    ```
    mvn clean package
    ```
-3. Run the application:
+3. Запустите приложение:
    ```
-   java -jar target/p2p-mail-client-1.0-SNAPSHOT.jar your.email@example.com
+   java -jar target/p2p-mail-client-1.0.jar your.email@example.com
    ```
-   Replace `your.email@example.com` with your desired email address.
+   Замените `your.email@example.com` на желаемый адрес электронной почты.
 
-## Usage
+## Использование
 
-Once the application starts, you'll see a menu with the following options:
-1. Send Message
-2. Check Inbox
-3. List Peers
-4. Exit
+После запуска приложения вы увидите меню со следующими опциями:
+1. Отправить сообщение
+2. Проверить входящие
+3. Список активных пользователей
+4. Выход
 
-- To send a message, choose option 1 and follow the prompts.
-- To check your inbox, choose option 2.
-- To see a list of discovered peers, choose option 3.
+- На данный момент приложение не поддерживает графический интерфейс.
+- Необходимо знать адрес электронной почты для отправки сообщений. Для этого поможет третий пункт
 
-## Troubleshooting
+## Устранение неполадок
 
-If you're having trouble seeing other peers or sending/receiving messages:
+Если у вас возникли проблемы с обнаружением других пиров или отправкой/получением сообщений:
 
-1. Ensure all peers are on the same local network.
-2. Check that your firewall is not blocking Java or the ports used (8888 for discovery, 8889 for messaging).
-3. Some routers may block UDP broadcasts. Try connecting peers directly using their IP addresses.
-4. If using a VPN, try disconnecting it as it might interfere with local network discovery.
-5. Ensure that your network allows peer-to-peer connections.
+1. Убедитесь, что все пиры находятся в одной локальной сети.
+2. Проверьте, не блокирует ли ваш файрвол Java или используемые порты (8888 для обнаружения, 8889 для обмена сообщениями).
+3. Некоторые роутеры могут блокировать UDP-рассылки. Попробуйте подключить пиры напрямую, используя их IP-адреса.
+4. Если вы используете VPN, попробуйте отключить его, так как он может мешать обнаружению в локальной сети.
+5. Убедитесь, что ваша сеть разрешает пиринговые соединения.
 
-## Known Limitations
+## Известные ограничения
 
-- Works only on local networks; cannot send messages over the internet.
-- No message persistence; messages are lost when the application is closed.
-- Peer discovery might not work on all network configurations.
-- No encryption or authentication; not suitable for sensitive information.
+- Работает только в локальных сетях; не может отправлять сообщения через интернет.
+- Нет сохранения сообщений; сообщения теряются при закрытии приложения.
+- Обнаружение пиров может не работать во всех конфигурациях сети.
+- Нет шифрования или аутентификации; не подходит для конфиденциальной информации.
 
-## Future Improvements
+## Планы по улучшению
 
-- Implement message persistence
-- Add encryption for message security
-- Improve peer discovery
-- Develop a graphical user interface
+- Реализовать сохранение сообщений
+- Добавить шифрование для безопасности сообщений
+- Улучшить обнаружение пиров вне локальной сети
+- Разработать графический пользовательский интерфейс
 
-## Contributing
+## Участие в разработке
 
-Contributions are welcome! Please ensure you have Maven installed before contributing to this project. Feel free to submit a Pull Request.
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
+Это мой личный проект, потому я не буду принимать Pull Request от других людей. Если вы хотите внести свой вклад, пожалуйста, создайте Issue или Fork этого репозитория.
